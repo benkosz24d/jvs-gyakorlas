@@ -42,3 +42,191 @@ console.log([2, 12, 3])
 //aggregálás
 
 console.log([2, 12, 3][1])
+
+// nem javasolt
+console.log([true, 2, "string..."]);
+
+//több dimenziós tömb
+
+// Array<array<number>>
+
+console.log([[2,3], [32,10], [6,4]][1][1] );
+
+/*
+* Object (Objektum)
+*/
+
+// kuld-értékpárok sorozata
+
+
+console.log(
+    {
+        firstName: 'József',
+        lastName: 'Kovács',
+        age:30,
+
+    }.lastName
+);
+
+//lookup, kulcs alapú kikérés
+
+console.log(
+    {
+        firstName: 'József',
+        lastName: 'Kovács',
+        age:30,
+
+    }['lastName']
+);
+
+console.log(
+    {
+        firstName: 'József',
+        lastName: 'Kovács',
+        age:30,
+        phonenumbers: ['067023456', '067023457'],
+        adress: {
+            street: 'Király u.',
+            city: 'Budapest',
+        }
+
+    }.phonenumbers[0]
+);
+
+// Az első telefon neve
+console.log(
+    
+    [
+        {
+            brand: 'Apple',
+            name: 'Iphone X',
+            Price: 250000,
+            provider: {
+                    country:  'HU',
+                    name:'Vodafon'
+
+            }
+
+        },  
+
+
+        {
+            brand: 'Huawei',
+            name: '10',
+            Price: 180000,
+            provider: {
+                    country:  'DE',
+                    name:'T-Mobile'
+
+            }
+
+        },
+
+
+        {
+            brand: 'ZTE',
+            name: 'Blade',
+            Price: 110000,
+            provider: {
+                    country:  'DE',
+                    name:'Vodafon'
+
+            }
+
+        },
+    
+    ][0].name
+)
+
+
+
+// A második telefon ára
+console.log(
+    
+    [
+        {
+            brand: 'Apple',
+            name: 'Iphone X',
+            Price: 250000,
+            provider: {
+                    country:  'HU',
+                    name:'Vodafon'
+
+            }
+
+        },  
+
+
+        {
+            brand: 'Huawei',
+            name: '10',
+            Price: 180000,
+            provider: {
+                    country:  'DE',
+                    name:'T-Mobile'
+
+            }
+
+        },
+
+
+        {
+            brand: 'ZTE',
+            name: 'Blade',
+            Price: 110000,
+            provider: {
+                    country:  'DE',
+                    name:'Vodafon'
+
+            }
+
+        },
+    
+    ][1].Price
+)
+
+
+// harmadik szolgáltató országa
+console.log(
+    
+    [
+        {
+            brand: 'Apple',
+            name: 'Iphone X',
+            Price: 250000,
+            provider: {
+                    country:  'HU',
+                    name:'Vodafon'
+
+            }
+
+        },  
+
+
+        {
+            brand: 'Huawei',
+            name: '10',
+            Price: 180000,
+            provider: {
+                    country:  'DE',
+                    name:'T-Mobile'
+
+            }
+
+        },
+
+
+        {
+            brand: 'ZTE',
+            name: 'Blade',
+            Price: 110000,
+            provider: {
+                    country:  'DE',
+                    name:'Vodafon'
+
+            }
+
+        },
+    
+    ][2].provider.country
+)
